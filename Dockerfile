@@ -6,6 +6,7 @@ ADD command.sh /script/command.sh
 
 RUN chmod +x /script/*.sh && \
 apt-get update -yyq && \
+export DEBIAN_FRONTEND=noninteractive && \
 apt-get dist-upgrade -yyq && \
 apt-get install -yyq tzdata locales locales-all dumb-init software-properties-common cron mariadb-client-10.1 vim bc jq sshpass git wget curl vim apt-utils sudo language-pack-zh-hant language-pack-zh-hant-base exiftool openssh-server pwgen rsync subversion build-essential && \
 ln -fs /usr/share/zoneinfo/Asia/Taipei /etc/localtime && \
