@@ -24,7 +24,6 @@ echo "alias ll='ls -al --color=auto'" >> ~/.bashrc && \
 echo "alias ls='ls --color=auto'" >> ~/.bashrc && \
 echo "alias grep='grep --color=auto'" >> ~/.bashrc && \
 add-apt-repository -y ppa:ondrej/php && \
-add-apt-repository -y ppa:mc3man/trusty-media && \
 add-apt-repository -y ppa:stebbins/handbrake-releases && \
 apt-get update && \
 apt-get install -yyq ffmpeg flac shntool imagemagick sox tofrodos unrar-free p7zip-full php7.0-cli php7.0-mysql mediainfo handbrake-cli libxvidcore4 zlib1g-dbg zlib1g-dev ruby-full && \
