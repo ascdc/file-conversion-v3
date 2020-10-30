@@ -26,13 +26,20 @@ echo "alias grep='grep --color=auto'" >> ~/.bashrc && \
 add-apt-repository -y ppa:ondrej/php && \
 add-apt-repository -y ppa:stebbins/handbrake-releases && \
 apt-get update && \
-apt-get install -yyq ffmpeg flac shntool imagemagick sox tofrodos unrar-free p7zip-full php7.0-cli php7.0-mysql mediainfo handbrake-cli libxvidcore4 zlib1g-dbg zlib1g-dev ruby-full && \
+apt-get install -yyq ffmpeg flac shntool imagemagick sox tofrodos unrar-free p7zip-full php7.0-cli php7.0-mysql mediainfo handbrake-cli libxvidcore4 zlib1g-dbg zlib1g-dev ruby-full python3-pip python3-opencv && \
 echo "SHELL=/bin/sh"> /etc/crontab && \
 echo "PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin">> /etc/crontab && \
 echo "*/1 * * * * root /script/command.sh">> /etc/crontab && \
 svn co https://svn.code.sf.net/p/gpac/code/trunk/gpac gpac && cd gpac && \
 ./configure --disable-opengl --use-js=no --use-ft=no --use-jpeg=no --use-png=no --use-faad=no --use-mad=no --use-xvid=no --use-ffmpeg=no --use-ogg=no --use-vorbis=no --use-theora=no --use-openjpeg=no && make && make install && cp bin/gcc/libgpac.so /usr/lib && \
 gem install flvtool2 
+pip3 install numpy
+pip3 install scikit-build
+pip3 install cmake
+pip3 install opencv-python
+pip3 install matplotlib
+pip3 install scikit-image
+pip3 install -U scikit-learn scipy
 
 WORKDIR /script
 ENTRYPOINT ["/script/run.sh"]
