@@ -32,13 +32,13 @@ echo "PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin">> /etc/
 echo "*/1 * * * * root /script/command.sh">> /etc/crontab && \
 svn co https://svn.code.sf.net/p/gpac/code/trunk/gpac gpac && cd gpac && \
 ./configure --disable-opengl --use-js=no --use-ft=no --use-jpeg=no --use-png=no --use-faad=no --use-mad=no --use-xvid=no --use-ffmpeg=no --use-ogg=no --use-vorbis=no --use-theora=no --use-openjpeg=no && make && make install && cp bin/gcc/libgpac.so /usr/lib && \
-gem install flvtool2 
-pip3 install numpy
-pip3 install scikit-build
-pip3 install cmake
-pip3 install opencv-python
-pip3 install matplotlib
-pip3 install scikit-image
+gem install flvtool2 && \
+pip3 install numpy && \
+pip3 install scikit-build && \
+pip3 install cmake && \
+pip3 install opencv-python && \
+pip3 install matplotlib && \
+pip3 install scikit-image && \
 pip3 install -U scikit-learn scipy
 
 WORKDIR /script
